@@ -8,6 +8,15 @@ module.exports = {
         filename: 'js/[name]-[chunkhash].js',
         publicPath: 'http://nikai.net.cn'
     },
+    module: {
+        rules: [{
+            test: /\.js$/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['latest']
+            }
+        }]
+    },
     mode: 'none',
     plugins: [
         new htmlWebpackPlugin({
