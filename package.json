@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/nikai1006/webpack-loader#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-preset-latest": "^6.24.1",

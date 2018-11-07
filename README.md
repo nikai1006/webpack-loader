@@ -5,3 +5,4 @@
 
 #### 参考文献
 - [https://babeljs.io/docs/en/](https://babeljs.io/docs/en/)
+- [babel](https://www.npmjs.com/package/babel-loader)
