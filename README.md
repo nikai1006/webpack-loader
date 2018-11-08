@@ -17,3 +17,4 @@
 - [https://github.com/kangax/html-minifier](https://github.com/kangax/html-minifier)
 - [https://github.com/jantimon/html-webpack-plugin/](https://github.com/jantimon/html-webpack-plugin/)
 - [inline-script](https://github.com/jantimon/html-webpack-plugin/blob/master/examples/inline/template.pug)
+- [https://segmentfault.com/a/1190000014408973](https://segmentfault.com/a/1190000014408973)
