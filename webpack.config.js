@@ -9,20 +9,34 @@ module.exports = {
         // publicPath: 'http://nikai.net.cn'
     },
     module: {
-        rules: [{
-            test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env']
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
-            }
-        },
+            },
             {
                 test: /\.css$/,
-                use: 'css-loader'
+                use: [
+                    {loader: 'style-loader'},
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    },
+                    {loader: 'sass-loader'}
+                ]
             },
+            // {
+            //     test: /\.less$/,
+            //     use: 'style!css!postcss!less'
+            // },
             // {
             //     test: /\.css$/,
             //     use: ['style-loader', 'postcss-loader']
@@ -42,10 +56,11 @@ module.exports = {
             inject: 'body',
             title: 'this a page'
         })
-    ],
-    postcss: [
-        require('autoprefixer')({
-            browsers: ['last 5 versions']
-        })
     ]
+    // ,
+    // postcss: [
+    //     require('autoprefixer')({
+    //         browsers: ['last 5 versions']
+    //     })
+    // ]
 }
