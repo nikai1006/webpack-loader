@@ -1,9 +1,11 @@
-import layer from './components/layer/layer';
+import Layer from './components/layer/layer';
 import common from './css/common.css';
 
 const App = function () {
-    console.log(layer);
-    console.log(common);
+    var dom = document.getElementById('app');
+    var layer = new Layer();
+
+    dom.innerHTML = layer.tpl;
 }
 
 new App();
