@@ -41,10 +41,10 @@ module.exports = {
             //     test: /\.css$/,
             //     use: ['style-loader', 'postcss-loader']
             // },
-            {
-                test: /\.ts$/,
-                use: 'ts-loader'
-            }
+            // {
+            //     test: /\.ts$/,
+            //     use: 'ts-loader'
+            // }
         ]
     },
     mode: 'none',
