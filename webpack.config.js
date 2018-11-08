@@ -5,8 +5,8 @@ module.exports = {
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'js/[name]-[chunkhash].js',
-        publicPath: 'http://nikai.net.cn'
+        filename: 'js/[name]-[chunkhash].js'
+        // publicPath: 'http://nikai.net.cn'
     },
     module: {
         rules: [{
@@ -18,15 +18,34 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
-        }]
+        },
+            {
+                test: /\.css$/,
+                use: 'css-loader'
+            },
+            // {
+            //     test: /\.css$/,
+            //     use: ['style-loader', 'postcss-loader']
+            // },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader'
+            }
+        ]
     },
     mode: 'none',
+    parser: 'sugarss',
     plugins: [
         new htmlWebpackPlugin({
             filename: 'a.html',
             template: 'index.html',
             inject: 'body',
             title: 'this a page'
+        })
+    ],
+    postcss: [
+        require('autoprefixer')({
+            browsers: ['last 5 versions']
         })
     ]
 }
