@@ -5,7 +5,11 @@ const App = function () {
     var dom = document.getElementById('app');
     var layer = new Layer();
 
-    dom.innerHTML = layer.tpl;
+    dom.innerHTML = layer.tpl({
+        name: 'nikai',
+        arr: ['a', 'b', 'xixi', 'baby']
+    });
+
 }
 
 new App();

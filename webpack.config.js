@@ -19,6 +19,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
             },
             {
+                test: /\.tpl$/,
+                use: "ejs-loader"
+            },
+            {
                 test: /\.html$/,
                 use: "html-loader"
             }
